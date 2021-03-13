@@ -1,0 +1,182 @@
+:root {
+  --yellow: #eef13f;
+  --orange: #fe6638;
+  --green: #80b238;
+  --blue: #80c1d6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: var(--blue);
+  color: #fff;
+  font-family: Atma, sans-serif;
+  font-size: 1.5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h1 + p,
+button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
+}
+
+/* ... Your turn! ... */
+
+@media (min-width: 640px) {
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-transform: uppercase;
+  background: var(--green);
+  opacity: 0.8;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+section {
+  padding: 1.5rem;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  color: var(--orange);
+  min-height: 100vh;
+  background-image: url(/img/blue-splash.png);
+  background-attachment: fixed;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* Tous les éléments h1 et p dans header */
+header > h1, p {     
+  display: flex;
+  flex: 0;                          /* Permet de rassembler les conteneur du Header */
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;     /* justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments */
+  align-items: center;
+  text-align: center;
+}
+
+#obstacles {
+  background: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  text-align: 5rem;
+  font-size: 0.5em;
+}
+
+.obstacles-group.grid {               /* Class ".obstacles-group grid" à renommer en ".obstacles-group.grid" */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.obstacles-group.grid article {
+  background: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  border-radius: 8px;
+}
+
+#prizes {
+  background: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  font-size: 0.5em;
+}
+
+.prizes-group.grid {                  /* Class ".prizes-group grid" à renommer en ".prizes-group.grid" */
+  display: flex;
+  padding: 1rem;
+ /* flex-direction: row;
+  justify-content: center;*/
+  gap: 1rem;
+}
+
+.prizes-group.grid article {                
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  border-style: dotted;
+}
+
+#apply {
+  display: flex;
+  flex-direction: column;
+}
+
+#apply form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+ 
+}
+
+footer {
+  background: var(--yellow);
+  padding: 1rem;
+  height: auto;
+  width: auto;
+  margin: auto;
+  text-align: center;
+  font-size: 0.4em;
+  font-weight: bold;
+  color: black;
+}
+}
